@@ -1,125 +1,46 @@
-	const element1 = document.getElementById("myBar1");
-	const stockId_list=['2330','2454','2308','2317','2303','2356','2353','1102','2324','2344','2408','6770','2337','2347','2371','1504','2891','2887','2884','00982A','00980A','00981A','0050','0056'];
+	const mainList = document.getElementById("marketList") ;
 	const mask_item1 = document.getElementById("hiddenMsg1") ;
 	const mask_item2 = document.getElementById("hiddenMsg2") ;
 	const mask_button = document.getElementById("collapseBtn2") ;
-	let running=false,sw_no=2,firstVisit = true ;     // original value:  true 
-    let refSec = 3000 ; // original value:  0
-	let count=0 ,stockId=0 , btn2_expandId= ""  ;
-	let width = 0 , intervalIds = [] , itemPrice_matrix=[] , itemPrice_arry = [] , itemYear_arry11 = [] , itemYear_arry12 = [] , itemYear_arry13 = [] , itemYear_arry21 = [] , itemYear_arry22 = [] , itemYear_arry23 = [] ;
-	let show_YearRpt="" , show_SeasonRpt="" , show_MonthRpt="" , tr_line="" ; 
-    let mymatrix,wi_o,wi_h,wi_c,wi_cc,wi_t,wi_tt,midline_txt1,midline_txt2,title_txt,item_price1,item_price2,mid_price1=0,mid_price2=0,min_price=0,max_price=0,incdecPrice1,incdecPrice2,timeLabel,labels=[],dataPoints1=[],dataPoints2=[],title1="圖例1",title2="圖例2",point_no=0;
 	window.addEventListener('load',function(){
 		mask_item1.style.display == "none" ;
 		mask_item2.style.display == "none" ;
-		startShow();
-		element1.style.width = '0%';  
-		document.getElementById("s01").addEventListener("change", refreshTime); 			
+		uqzjdqhfncc(0);
+		document.getElementById("s01").addEventListener("change", function(event) {
+		   while(ncvnhWqeu.length) {
+			  clearInterval(ncvnhWqeu.pop());
+			}
+			const zxycbaciyc=event.target.value;	
+			if (zxycbaciyc == 9527614803)	
+				return   
+			else if (zxycbaciyc === "Z" )
+				iasrUejncuir()
+			else
+				uqzjdqhfncc(zxycbaciyc) ;				
+		});		
 	}); 
-	
-   function refreshTime() {
-             switch ( $(this).val()) {
-					  case "A": 
-							window.location.href = 'https://perryjohnsonleon.github.io/tutorial/index_a.htm' ;
-							break;
-					  case "B":
-							window.location.href = 'https://perryjohnsonleon.github.io/tutorial/index_b.htm'	;
-							break;
-					  case "C": 
-							window.location.href = 'https://perryjohnsonleon.github.io/tutorial/index_c.htm' ;
-							break;
-					  case "D": 
-							window.location.href = 'https://perryjohnsonleon.github.io/tutorial/index_d.htm' ;
-							break;
-					  case "E": 
-							window.location.href = 'https://perryjohnsonleon.github.io/tutorial/index_e.htm' ;
-							break;
-					  case "F": 
-							window.location.href = 'https://perryjohnsonleon.github.io/tutorial/index_f.htm' ;
-							break;
-					  case "W": 
-							window.location.href = 'https://perryjohnsonleon.github.io/exercise2/index_w.htm' ;
-							break;
-					  case "X": 
-							window.location.href = 'https://perryjohnsonleon.github.io/exercise2/index_x.htm' ;
-							break;
-					  case "K": 
-							window.location.href = 'https://perryjohnsonleon.github.io/tutorial2/index_k.htm' ;
-							break;
-					  case "Q": 
-							window.location.href = 'https://perryjohnsonleon.github.io/tutorial2/index_q.htm' ;
-							break;
-					  case "U": 
-							window.location.href = 'https://perryjohnsonleon.github.io/tutorial2/index_u.htm' ;
-							break;
-					  case "V": 
-							window.location.href = 'https://perryjohnsonleon.github.io/tutorial2/index_v.htm' ;
-							break;
-					  case "Y": 
-							window.location.href = 'https://perryjohnsonleon.github.io/tutorial/index_xx.htm' ;
-							break;
-					  case "Z": 
-							window.location.href = 'https://perryjohnsonleon.github.io/tutorial/index_z.htm' ;
-							break;
-					  case "P": 
-							window.location.href = 'https://perryjohnsonleon.github.io/tutorial/graph.htm' ;
-							break;
-					  case "-1": 
-							window.location.href = 'https://perryjohnsonleon.github.io/exercise' ;
-							break;
-                  case "0": 
-                     width = 100;
-                     refSec = 99999 ;
-                     element1.style.width = '0%'; 
-                     break;
-                  case "1": 
-                     refSec = 3000 ;
-                     break;
-                  case "2":
-                     refSec = 5000 ;
-                     break;
-                  case "3": 
-                     refSec = 10000 ;
-                     break;
-                  case "5": 
-                     refSec = 30000 ;
-                     break;
-                  case "6": 
-                  refSec = 60000 ;
-                     break;
-                  case "7": 
-                     refSec = 600000 ;
-                     break; 
-                  case "10": 
-                     refSec = 1800000 ;
-                     break;                                     
-                  default:
-                     refSec = 60000 ;
-                     return;
-                    } 
-
-		}	
- 
-  async function getpricePost(stockId) {
+		
+  async function ks1dnniu5euwosze(qwshjkkgu) {
 	  try {
-	   let itemPrice_matrix="" ;
-	   let oldCanvas = document.getElementById("hiddenMsg2");
-	   if (oldCanvas && stockId == -1) {
-	      oldCanvas.outerHTML = "<div id='hiddenMsg2' style='display:none;'><canvas id='myChart' width='320' height='200'  display='none'></canvas><div id='collapseBtn2' style='display:none;justify-content:center;'><img src='collapse.png' style='cursor:pointer;' onclick='getPost(0)' /></div></div>" ;
+	   let ckviieijndMX="" ;
+	   let oldZcnuytwew = document.getElementById("hiddenMsg2");
+	   if (oldZcnuytwew && qwshjkkgu == -1) {
+	      oldZcnuytwew.outerHTML = "<div id='hiddenMsg2' style='display:none;'><canvas id='myChart' width='320' height='200'  display='none'></canvas><div id='collapseBtn2' style='display:none;justify-content:center;'><img src='collapse.png' style='cursor:pointer;' onclick='jeirqurwgjdoiure(0)' /></div></div>" ;
 	      return 0;
 		}
 		else {
-		  oldCanvas.outerHTML = "<div id='hiddenMsg2'><canvas id='myChart' width='320' height='200'></canvas><div id='collapseBtn2' style='justify-content:center;'><img src='collapse.png' style='cursor:pointer;' onclick='getpricePost(-1)' /></div></div>" ;
-		}
-		let fetchUrl_str1="https://ws.api.cnyes.com/ws/api/v1/charting/history?resolution=1&symbol=TWS:" , fetchUrl_str2=":STOCK&quote=1"   ;
-		let fetchUrl_str=fetchUrl_str1 + stockId_list[stockId] + fetchUrl_str2 ;
-		const response = await fetch(fetchUrl_str);
-		if (!response.ok) {
-		  throw new Error(`HTTP error! status: ${response.status}`);
+		  oldZcnuytwew.outerHTML = "<div id='hiddenMsg2' style='display:block;'><canvas id='myChart' width='320' height='200'></canvas><div id='collapseBtn2' style='justify-content:center;'><img src='collapse.png' style='cursor:pointer;' onclick='ks1dnniu5euwosze(-1)' /></div></div>" ;
+		}				
+		let xuzjxjoixu7e94_xuqq1 = CODEX('aHR0cHM6Ly93cy5hcGkuY255ZXMuY29tL3dzL2FwaS92MS9jaGFydGluZy9oaXN0b3J5P3Jlc29sdXRpb249MSZzeW1ib2w9VFdTOg=='); 
+		let xuzjxjoixu7e94_xuqq2 = CODEX('OlNUT0NLJnF1b3RlPTE=') ;
+		let xuzjxjoixu7e94_xuqq=xuzjxjoixu7e94_xuqq1 + qwshjkkgu_pjwqvxzn[qwshjkkgu] + xuzjxjoixu7e94_xuqq2 ;
+		const xcuaouusd = await fetch(xuzjxjoixu7e94_xuqq);
+		if (!xcuaouusd.ok) {
+		  throw new Error(`HTTP error! status: ${xcuaouusd.status}`);
 		}
 
-		const post = await response.json(); // Convert response to JS object
-		return post;
+		const noqvoiiuruw = await xcuaouusd.json(); // Convert xcuaouusd to JS object
+		return noqvoiiuruw;
 	  } catch (error) {
 		console.error('Fetch error:', error);
 		return null;
@@ -127,64 +48,193 @@
 	}
 		
  
- async function getPost(stockId) {
+  async function jeirqurwgjdoiure(qwshjkkgu) {
+		let xuzjxjoixu7e94_xuqq; 	  
 	  try {
-		let fetchUrl_str="" ;
-		let fetchUrl_str1="https://ws.api.cnyes.com/ws/api/v1/charting/history?resolution=1&symbol=TWS:" , fetchUrl_str2=":STOCK&quote=1"   ;
-		if (stockId == 9999 ) 
-			fetchUrl_str="https://ws.api.cnyes.com/ws/api/v1/charting/history?symbol=TWS:TSE01:INDEX&resolution=D&quote=1&from=NaN&to=NaN"
+		let xuzjxjoixu7e94_xuqq1=CODEX('aHR0cHM6Ly93cy5hcGkuY255ZXMuY29tL3dzL2FwaS92MS9jaGFydGluZy9oaXN0b3J5P3Jlc29sdXRpb249MSZzeW1ib2w9VFdTOg==');
+		let xuzjxjoixu7e94_xuqq2=CODEX('OlNUT0NLJnF1b3RlPTE=');
+		if (qwshjkkgu == 9527614803 ) 
+			xuzjxjoixu7e94_xuqq=CODEX('aHR0cHM6Ly93cy5hcGkuY255ZXMuY29tL3dzL2FwaS92MS9jaGFydGluZy9oaXN0b3J5P3N5bWJvbD1UV1M6VFNFMDE6SU5ERVgmcmVzb2x1dGlvbj1EJnF1b3RlPTEmZnJvbT1OYU4mdG89TmFO') 
 		else
-			fetchUrl_str=fetchUrl_str1 + stockId_list[stockId] + fetchUrl_str2 ;	
-		const response = await fetch(fetchUrl_str);
-		if (!response.ok) {
-		  throw new Error(`HTTP error! status: ${response.status}`);
+			xuzjxjoixu7e94_xuqq=xuzjxjoixu7e94_xuqq1 + qwshjkkgu + xuzjxjoixu7e94_xuqq2 ;
+		if (qwshjkkgu == 1530789767 ) xuzjxjoixu7e94_xuqq= CODEX('aHR0cHM6Ly93cy5hcGkuY255ZXMuY29tL3dzL2FwaS92MS9jaGFydGluZy9oaXN0b3J5P3N5bWJvbD1UV1M6VFNFMDE6SU5ERVgmcmVzb2x1dGlvbj1EJnF1b3RlPTEmZnJvbT1OYU4mdG89TmFO') ;
+		if (qwshjkkgu == 931658204187 ) xuzjxjoixu7e94_xuqq= CODEX('aHR0cHM6Ly93cy5hcGkuY255ZXMuY29tL3dzL2FwaS92My91bml2ZXJzYWwvcXVvdGU/dHlwZT1JRFhNQUpPUiZjb2x1bW49QiZwYWdlPTEmbGltaXQ9MjA=') ;		
+		const xcuaouusd = await fetch(xuzjxjoixu7e94_xuqq);
+		if (!xcuaouusd.ok) {
+		  throw new Error(`HTTP error! status: ${xcuaouusd.status}`);
 		}
-		const post = await response.json(); // Convert response to JS object
-		return post;
+		const jvjioeuro = await xcuaouusd.json(); // Convert xcuaouusd to JS object
+		return jvjioeuro;
+	  } catch (error) {
+		console.error('Fetch error:', error);
+		return null;
+     }
+   }
+  
+    async function iouioueirur5kk3zx() {
+		await wnv3n7urrhh(931658204187);
+	}  
+  
+
+   async function jWdsudjQue0es(qwshjkkgu,uywebdncnc) {
+	  try {	  
+		xuzjxjoixu7e94_xuqq=CODEX('aHR0cHM6Ly9tYXJrZXRpbmZvLmFwaS5jbnllcy5jb20vbWkvYXBpL3YxL2ZpbmFuY2lhbEluZGljYXRvci9yZXZlbnVlL1RXUzo=') + qwshjkkgu + CODEX('OlNUT0NLP3llYXI9NSZ0bz0xNTcyMzY0ODAw') ;
+		const xcuaouusd = await fetch(xuzjxjoixu7e94_xuqq);
+		if (!xcuaouusd.ok) {
+		  throw new Error(`HTTP error! status: ${xcuaouusd.status}`);
+		}
+		const mmcjvjoueu = await xcuaouusd.json(); // Convert xcuaouusd to JS object
+		return mmcjvjoueu;
 	  } catch (error) {
 		console.error('Fetch error:', error);
 		return null;
      }
   }
 
-   async function getPostYOY(stockId,firstVisit) {
-	  try { 
-		fetchUrl_str="https://marketinfo.api.cnyes.com/mi/api/v1/financialIndicator/revenue/TWS:" + stockId_list[stockId] + ":STOCK?year=5&to=1572364800" ;
-		const response = await fetch(fetchUrl_str);
-		if (!response.ok) {
-		  throw new Error(`HTTP error! status: ${response.status}`);
+   async function qruErejdjfjd(qwshjkkgu,uywebdncnc) {
+	  try { 		
+		xuzjxjoixu7e94_xuqq= CODEX('aHR0cHM6Ly9tYXJrZXRpbmZvLmFwaS5jbnllcy5jb20vbWkvYXBpL3YxL2ZpbmFuY2lhbEluZGljYXRvci9lcHMvVFdTOg==') + qwshjkkgu + CODEX('OlNUT0NLP3Jlc29sdXRpb249USZhY2M9ZmFsc2UmeWVhcj01JnRvPTE1NzM0ODgwMDA=') ;
+		const xcuaouusd = await fetch(xuzjxjoixu7e94_xuqq);
+		if (!xcuaouusd.ok) {
+		  throw new Error(`HTTP error! status: ${xcuaouusd.status}`);
 		}
-		const post = await response.json(); // Convert response to JS object
-		return post;
+		const ksakdffsi = await xcuaouusd.json(); 
+		return ksakdffsi;
 	  } catch (error) {
 		console.error('Fetch error:', error);
 		return null;
      }
   }
-
-   async function getPostEPS(stockId,firstVisit) {
-	  try { 
-		fetchUrl_str="https://marketinfo.api.cnyes.com/mi/api/v1/financialIndicator/eps/TWS:" + stockId_list[stockId] + ":STOCK?resolution=Q&acc=false&year=5&to=1573488000" ;
-		const response = await fetch(fetchUrl_str);
-		if (!response.ok) {
-		  throw new Error(`HTTP error! status: ${response.status}`);
-		}
-		const post = await response.json(); // Convert response to JS object
-		return post;
-	  } catch (error) {
-		console.error('Fetch error:', error);
-		return null;
-     }
+  
+  async function iasrUejncuir() {
+	  mainList.textContent = "";
+	  const fipohzqrw = await jeirqurwgjdoiure(931658204187);
+	  if (fipohzqrw) {
+			const ITEMS = fipohzqrw.data.items ;
+			const ITEM1 = ITEMS.slice(13, 17);
+			const ITEM2 = ITEMS.slice(0, 12);	
+			ITEM1.forEach((quote_obj,idx) => {
+				for ( var n in quote_obj) {
+					if ( n == "200009" ) FDYUDYG.jxzjldfo=quote_obj[n];
+					if ( n == "6" ) FDYUDYG.jcnuoufifu= quote_obj[n];
+					if ( n == "11" ) FDYUDYG.piuweyfnqq=quote_obj[n];  
+					if ( n == "12" ) FDYUDYG.cuoiuwuqie=quote_obj[n];
+					if ( n == "13" ) FDYUDYG.sidpsids= quote_obj[n];
+				} 
+				  const row = document.createElement('div');
+				  row.style.display = 'flex';
+				  const nameCell = document.createElement('div');
+				  nameCell.className = 'item2';
+				  nameCell.textContent = FDYUDYG.jxzjldfo;
+				  row.appendChild(nameCell);
+				  const priceCell = document.createElement('div');
+				  priceCell.className = 'item3w';
+				  priceCell.textContent = FDYUDYG.jcnuoufifu;		  
+				  if (FDYUDYG.piuweyfnqq > 0) priceCell.classList.add('risePrice');
+				  else if (FDYUDYG.piuweyfnqq < 0) priceCell.classList.add('fellPrice');
+				  else priceCell.classList.add('flatPrice');			  
+				  row.appendChild(priceCell);
+				  const gainCell = document.createElement('div');
+				  gainCell.className = 'item3w';
+				  gainCell.textContent = FDYUDYG.piuweyfnqq;
+				  if (FDYUDYG.piuweyfnqq > 0) gainCell.classList.add('risePrice');
+				  else if (FDYUDYG.piuweyfnqq < 0) gainCell.classList.add('fellPrice');
+				  else gainCell.classList.add('flatPrice');
+				  row.appendChild(gainCell);
+				  [FDYUDYG.cuoiuwuqie, FDYUDYG.sidpsids].forEach(value => {
+					const cell = document.createElement('div');
+					cell.className = 'item3w';
+					cell.textContent = value;
+					row.appendChild(cell);
+				  });		  
+				  mainList.appendChild(row);							
+			});
+			ITEM2.forEach((quote_obj,idx) => {
+				for ( var n in quote_obj) {
+					if ( n == "200009" ) FDYUDYG.jxzjldfo=quote_obj[n];
+					if ( n == "6" ) FDYUDYG.jcnuoufifu= quote_obj[n];
+					if ( n == "11" ) FDYUDYG.piuweyfnqq=quote_obj[n];  
+					if ( n == "12" ) FDYUDYG.cuoiuwuqie=quote_obj[n];
+					if ( n == "13" ) FDYUDYG.sidpsids= quote_obj[n];
+				} 
+				  const row = document.createElement('div');
+				  row.style.display = 'flex';
+				  const nameCell = document.createElement('div');
+				  nameCell.className = 'item2';
+				  nameCell.textContent = FDYUDYG.jxzjldfo;
+				  row.appendChild(nameCell);
+				  const priceCell = document.createElement('div');
+				  priceCell.className = 'item3w';
+				  priceCell.textContent = FDYUDYG.jcnuoufifu;		  
+				  if (FDYUDYG.piuweyfnqq > 0) priceCell.classList.add('risePrice');
+				  else if (FDYUDYG.piuweyfnqq < 0) priceCell.classList.add('fellPrice');
+				  else priceCell.classList.add('flatPrice');			  
+				  row.appendChild(priceCell);
+				  const gainCell = document.createElement('div');
+				  gainCell.className = 'item3w';
+				  gainCell.textContent = FDYUDYG.piuweyfnqq;
+				  if (FDYUDYG.piuweyfnqq > 0) gainCell.classList.add('risePrice');
+				  else if (FDYUDYG.piuweyfnqq < 0) gainCell.classList.add('fellPrice');
+				  else gainCell.classList.add('flatPrice');
+				  row.appendChild(gainCell);
+				  [FDYUDYG.cuoiuwuqie, FDYUDYG.sidpsids].forEach(value => {
+					const cell = document.createElement('div');
+					cell.className = 'item3w';
+					cell.textContent = value;
+					row.appendChild(cell);
+				  });		  
+				  mainList.appendChild(row);							
+			});
+	   }
+	
   }
+	const CODEX= (str) => {
+	  return decodeURIComponent(
+		atob(str).split('').map(
+		  ch => '%' + ch.charCodeAt(0).toString(16).padStart(2, '0')
+		).join('')
+	  );
+	}	  
+	const sdj2sj7ry0iweyr="JzIzMzAnLCcyNDU0JywnMjMwOCcsJzMwMDgnLCcyMzE3JywnMjMwMycsJzIzNTYnLCcyMzU3JywnMjM1MycsJzExMDInLCcyMzI0JywnMjM0NCcsJzgyOTknLCcyNDA4JywnNjc3MCcsJzIzMzcnLCcyMzQ3JywnMjM3MScsJzE1MDQnLCcyODkxJywnMDA0MDNBJywnMDA5OTFBJywnMDA5ODJBJywnMDA5ODBBJywnMDA5ODFBJywnMDA1MCcsJzAwNTYn",
+	nv9dj3ip1em6pm="JzIzMzAnLCcyNDU0JywnMzY2MScsJzM0NDMnLCcyMzAzJywnMjYwNicsJzk5NDAnLCczMDQyJywnMjYwMycsJzE3MTMnLCcyNjA5JywnMDA1MCcsJzAwODc4JywnMDA2MjA4JywnMDA3MTMnLCcwMDY5MicsJzAwODgxJywnMDA5MTknLCcwMDk0MCcsJzAwNzU3JywnMDA5ODJBJywnMDA5ODNBJywnMDA5ODRBJywnMDA5ODVBJywnMDA5OTJBJw==", 
+	nv00cbm5ipk7sdkdk="JzI4ODInLCcyODg3JywnMjg5MScsJzI4ODEnLCcyODg0JywnMjg4MycsJzI4OTInLCcyODg2JywnMjgzOCcsJzI4ODUnLCcyODkwJywnMDA1MCcsJzAwODc4JywnMDA2MjA4JywnMDA3MTMnLCcwMDY5MicsJzAwODgxJywnMDA5MTknLCcwMDk0MCcsJzAwNzU3JywnMDA5ODJBJywnMDA5ODNBJywnMDA5ODRBJywnMDA5ODVBJywnMDA5OTJBJw==",
+	djs1d5uu97mdm="JzI2MDMnLCcyNjA2JywnMjYwNScsJzI2MDknLCcyNjEwJywnMjYxOCcsJzI2MTUnLCcyNjMzJywnMjY0NScsJzI2NDYnLCcyNjM0JywnMDA1MCcsJzAwODc4JywnMDA2MjA4JywnMDA3MTMnLCcwMDY5MicsJzAwODgxJywnMDA5MTknLCcwMDk0MCcsJzAwNzU3JywnMDA5ODJBJywnMDA5ODNBJywnMDA5ODRBJywnMDA5ODVBJywnMDA5OTJBJw==",
+	si2sa41ik7syw="JzEzMDEnLCcxMzAzJywnMTMyNScsJzEzMjYnLCcxMzE0JywnMTMwNycsJzEzMDQnLCcxMzEwJywnMTMwOCcsJzEzMTInLCcxMzEzJywnMDA1MCcsJzAwODc4JywnMDA2MjA4JywnMDA3MTMnLCcwMDY5MicsJzAwODgxJywnMDA5MTknLCcwMDk0MCcsJzAwNzU3JywnMDA5ODJBJywnMDA5ODNBJywnMDA5ODRBJywnMDA5ODVBJywnMDA5OTJBJw==",
+	apm8dk9ue3uu="JzIwMjcnLCcyMDAyJywnMjAxNCcsJzIwMDYnLCcyMDEwJywnMjAwOCcsJzIwMDknLCcyMDMyJywnMjAxMCcsJzIyMTEnLCc5OTU4JywnMDA1MCcsJzAwODc4JywnMDA2MjA4JywnMDA3MTMnLCcwMDY5MicsJzAwODgxJywnMDA5MTknLCcwMDk0MCcsJzAwNzU3JywnMDA5ODJBJywnMDA5ODNBJywnMDA5ODRBJywnMDA5ODVBJywnMDA5OTJBJw==",
+	js0dud35lj1djlj="JzI1MDEnLCcyNTA0JywnMjUyOCcsJzI1NDInLCc1NTIyJywnMjUxNScsJzI1MjAnLCcyNTM5JywnMjUzNicsJzI1NDAnLCcyNTA1JywnMDA1MCcsJzAwODc4JywnMDA2MjA4JywnMDA3MTMnLCcwMDY5MicsJzAwODgxJywnMDA5MTknLCcwMDk0MCcsJzAwNzU3JywnMDA5ODJBJywnMDA5ODNBJywnMDA5ODRBJywnMDA5ODVBJywnMDA5OTJBJw==",
+	yrec7c3ximcnv="JzE0MDInLCcxNDA5JywnMTQxMycsJzE0MTQnLCcxNDE3JywnMTQxOCcsJzE0MTknLCcxNDE5JywnMTQzNCcsJzE0NDAnLCcxNDQxJywnMDA1MCcsJzAwODc4JywnMDA2MjA4JywnMDA3MTMnLCcwMDY5MicsJzAwODgxJywnMDA5MTknLCcwMDk0MCcsJzAwNzU3JywnMDA5ODJBJywnMDA5ODNBJywnMDA5ODRBJywnMDA5ODVBJywnMDA5OTJBJw==",
+	p9okcque0bv="JzEyMTYnLCcxMjEwJywnMTIxNScsJzEyMjknLCcxMjE3JywnMTIxOCcsJzEyMDEnLCcxNzAyJywnMTIwMycsJzE3MzcnLCczMDU0JywnMDA1MCcsJzAwODc4JywnMDA2MjA4JywnMDA3MTMnLCcwMDY5MicsJzAwODgxJywnMDA5MTknLCcwMDk0MCcsJzAwNzU3JywnMDA5ODJBJywnMDA5ODNBJywnMDA5ODRBJywnMDA5ODVBJywnMDA5OTJBJw==",
+	jxjx94x1mnpwqc="JzE5MDMnLCcxOTA0JywnMTkwNScsJzE5MDYnLCcxOTA3JywnMTkwOScsJzY3OTAnLCcwMDUwJywnMDA4NzgnLCcwMDYyMDgnLCcwMDcxMycsJzAwNjkyJywnMDA4ODEnLCcwMDkxOScsJzAwOTQwJywnMDA3NTcnLCcwMDk4MkEnLCcwMDk4M0EnLCcwMDk4NEEnLCcwMDk4NUEnLCcwMDk5MkEn",
+	a1ncbvoiwi06w="JzYyMTQnLCcyNDI3JywnMjQ1MycsJzI0NjgnLCcyNDcxJywnMjQ4MCcsJzMwMjknLCc0OTk0JywnNTIwMycsJzYxMTInLCc2MTgzJywnMDA1MCcsJzAwODc4JywnMDA2MjA4JywnMDA3MTMnLCcwMDY5MicsJzAwODgxJywnMDA5MTknLCcwMDk0MCcsJzAwNzU3JywnMDA5ODJBJywnMDA5ODNBJywnMDA5ODRBJywnMDA5ODVBJywnMDA5OTJBJw==";
+	const FDYUDYG = {jxzjldfo: '&*sdf29ufs%uf$jf1u3fuu', kjdsuofu: 'hxhzx078tyji', jcnuoufifu: 0 , cuoiuwuqie: 0, sidpsids: 0, piuweyfnqq: 0 };
+	const WOJCJQMNNV = [sdj2sj7ry0iweyr,nv9dj3ip1em6pm,nv00cbm5ipk7sdkdk,djs1d5uu97mdm,si2sa41ik7syw,apm8dk9ue3uu,js0dud35lj1djlj,yrec7c3ximcnv,p9okcque0bv,jxjx94x1mnpwqc,a1ncbvoiwi06w];
+	const JDSHFHIU = { sym: '大盤指數', id: '2353', price: 0 , high: 0, low: 0, change: 0 };
+	const bmvniiry = {
+	  nxcjcqw: { ...JDSHFHIU, jxcxuv: JDSHFHIU.price, nmcnio: JDSHFHIU.price, pozbwue: JDSHFHIU.price, vzsluere: 0 , mnvqriuhf:0},
+	  markets: WOJCJQMNNV.map(m => ({ ...m, change: 0, spark: [] })),
+	  bvhyqwip: [],
+	 };
+	const hc01uqujdcxnn = [sdj2sj7ry0iweyr,nv9dj3ip1em6pm,nv00cbm5ipk7sdkdk,djs1d5uu97mdm,si2sa41ik7syw,apm8dk9ue3uu,js0dud35lj1djlj,yrec7c3ximcnv,p9okcque0bv,jxjx94x1mnpwqc,a1ncbvoiwi06w];
+	const jhdfwhe="aHR0cHM6Ly9wZXJyeWpvaG5zb25sZW9uLmdpdGh1Yi5pby9kZHd3L3RpY2tjaGFydC5odG0/aGZraGR5Zm5mPQ==",
+	nxmcyeqrw="aHR0cHM6Ly9wZXJyeWpvaG5zb25sZW9uLmdpdGh1Yi5pby9kZHd3L3ByaWNlYWxhcm0uaHRtP2pmdmRvN2RmdW90ZHY9",
+	ouvimvkiffi="aHR0cHM6Ly9wZXJyeWpvaG5zb25sZW9uLmdpdGh1Yi5pby9kZHd3L2NhbC5odG0/d3Nqa2h6dTAxajl2anF1anB5ZD0=";
+	let qwshjkkgu_pjwqvxzn=[],nxbciyrpsg=false,sw_no=1,uywebdncnc = true ;
+	let $uydyhsjde="季財報,epsYOY(%),EPS,累計EPS",$jcvuzxnqwpjd="月財報,營收(千元),年增率";
+	// 5a2j6LKh5aCxLGVwc1lPWSglKSxFUFMs57Sv6KiIRVBT
+	// 5pyI6LKh5aCxLOeHn+aUtijljYPlhYMpLOW5tOWinueOhw==
+	// qwshjkkgu_pjwqvxzn = CODEX(hc01uqujdcxnn[sel_No]).split(',').map(x => x.slice(1, -1));
+    let refSec = 3000 ; 
+	let count=0 ,qwshjkkgu=0 , btn2_expandId= ""  ;
+	let width = 0 , ncvnhWqeu = [] , ckviieijndMX=[] , jckljxcoveuvr = [] , cvkljforuevr = [] , ncvjuojfmcervr = [] , oqcxbueyhfvr = [] , nchajfhweuyvr = [] , qwbphdueuvr = [] , zuincksjsdueyr = [] ;
+	let jhsdfkzxpr="" , cnmvweghfpr="" , nmcnuruytpr="" , jdjdjjsdjtrl="" ; 
+    let mymatrix,wi_o,wi_h,wi_c,wi_cc,wi_t,wi_tt,title_txt,item_price1,item_price2,mid_price1=0,mid_price2=0,min_price=0,max_price=0,incdecPrice1,incdecPrice2,timeLabel,labels=[],dataPoints1=[],dataPoints2=[],point_no=0;
 
-
-
- async function displayPost(stockId) {
-	  const post = await getPost(stockId);
+ async function wnv3n7urrhh(qwshjkkgu,itemId) {
+	  const ksh7dsk9hfky = await jeirqurwgjdoiure(qwshjkkgu);
 	  let elemId_price = "" , elemId_price_flag = 0;
-	  if (stockId == 9999) {
-			if (post) {
-				const quote_obj = post.data.quote ;	
+	  if (qwshjkkgu == 9527614803) {
+			if (ksh7dsk9hfky) {
+				const quote_obj = ksh7dsk9hfky.data.quote ;	
 				for ( var n in quote_obj) {
 					if ( n == "11" ) {
 						if (quote_obj[n]> 0) 
@@ -192,7 +242,7 @@
 							document.getElementById("wi-d").classList.add("wi-risePrice");
                             } 
                         else {
-                          if (quote_obj[n] === 0){ 
+                          if (quote_obj[n] == 0){ 
                            	document.getElementById("wi-d").classList.add("wi-flatPrice");                           	  	 		
                           }
                           else {
@@ -202,89 +252,112 @@
 						document.getElementById("wi-d").innerHTML = quote_obj[n]  ;		
 					} 		
 				}
-				document.getElementById("wi-c").innerHTML= post.data.c + '(C)';
-				document.getElementById("wi-h").innerHTML= post.data.h + '(H)';
-				document.getElementById("wi-l").innerHTML= post.data.l + '(L)';						
+				document.getElementById("wi-c").innerHTML= ksh7dsk9hfky.data.c + '(C)';
+				document.getElementById("wi-h").innerHTML= ksh7dsk9hfky.data.h + '(H)';
+				document.getElementById("wi-l").innerHTML= ksh7dsk9hfky.data.l + '(L)';						
 			}	
 	  }
 	  else {
-			const num = stockId+1 ;
-			let elemId_1="item-1" + num , elemId_2="item-2" + num , elemId_3="item-3" + num , elemId_4="item-4" + num , elemId_5="item-5" + num ;
-			btn2_expandId = "btn2-expandId" + num ; 
-			if (post) {
-				const quote_obj = post.data.quote ;
-				for ( var n in quote_obj) {
-					const preNo = stockId_list[stockId].substring(0, 2);
-					if ( n == "200009" ) {
-						let itemHeadname= quote_obj[n] ;
-						if (preNo == "00") itemHeadname= stockId_list[stockId] ;
-						document.getElementById(elemId_1).innerHTML =  "<button class='btn-expand' onclick='showElement(" + stockId + ",false);'>" +  itemHeadname + "</button>" 
-					}
-					if ( n == "6" ) elemId_price= quote_obj[n] ;
-					if ( n == "11" ) {
-							if ( quote_obj[n]> 0) {
-									elemId_price_flag= 1 ;
-									document.getElementById(elemId_3).classList.add('risePrice');
-								} 
-							else {
-								if ( quote_obj[n] === 0){ 
-									elemId_price_flag= 0 ;
-									document.getElementById(elemId_3).classList.add('flatPrice');
-									}
-								else {
-									elemId_price_flag= -1 ;
-									document.getElementById(elemId_3).classList.add('fellPrice');	
-									}
-							}
-						document.getElementById(elemId_3).innerHTML =  "<span class='span_rpt'>" + quote_obj[n] + "</span>" ;					
-					}	   
-					if ( n == "12" ) document.getElementById(elemId_4).innerHTML =  "<span class='span_rpt'>" + quote_obj[n] + "</span>" ;
-					if ( n == "13" ) document.getElementById(elemId_5).innerHTML =  "<span class='span_rpt'>" + quote_obj[n] + "</span>" ;
-				}
-				document.getElementById(elemId_2).innerHTML =  "<button id='" + btn2_expandId +"' onclick='realtimePrice(" + stockId + ",true);'>" + elemId_price + "</button>" ;
-				if (elemId_price_flag === 1)  document.getElementById(btn2_expandId).classList.add('btn-risePrice');
-				if (elemId_price_flag === 0)  document.getElementById(btn2_expandId).classList.add('btn-flatPrice');	
-				if (elemId_price_flag === -1)  document.getElementById(btn2_expandId).classList.add('btn-fellPrice');		
-			}
+		  if (ksh7dsk9hfky) {
+				const quote_obj = ksh7dsk9hfky.data.quote ;
+			    for ( var n in quote_obj) {
+					if ( n == "200009" ) FDYUDYG.jxzjldfo=quote_obj[n];
+					if ( n == "6" ) FDYUDYG.jcnuoufifu= quote_obj[n];
+					if ( n == "11" ) FDYUDYG.piuweyfnqq=quote_obj[n];  
+					if ( n == "12" ) FDYUDYG.cuoiuwuqie=quote_obj[n];
+					if ( n == "13" ) FDYUDYG.sidpsids= quote_obj[n];
+				} 
+		   }
+			  const row = document.createElement('div');
+			  row.style.display = 'flex';
+			  const nameCell = document.createElement('div');
+			  nameCell.className = 'item2';
+			  const namebtn = document.createElement('button');
+			  namebtn.className = 'btn-expand1'; 
+			  namebtn.textContent = FDYUDYG.jxzjldfo;
+			  namebtn.onclick = () => oxcQewncvcnv(qwshjkkgu,uywebdncnc);  
+			  nameCell.appendChild(namebtn);
+			  row.appendChild(nameCell);
+			  const priceCell = document.createElement('div');
+			  priceCell.className = 'item3';
+			  const pricebtn = document.createElement('button');
+			  pricebtn.className = 'btn-expand1';
+			  if (FDYUDYG.piuweyfnqq > 0) pricebtn.classList.add('risePrice');
+			  else if (FDYUDYG.piuweyfnqq < 0) pricebtn.classList.add('fellPrice');
+			  else pricebtn.classList.add('flatPrice');			  
+			  pricebtn.textContent = FDYUDYG.jcnuoufifu;
+			  pricebtn.onclick = () => ipsifaifiaYojjfx(jhdfwhe,btoa(qwshjkkgu)) ;  	 
+			  priceCell.appendChild(pricebtn);
+			  row.appendChild(priceCell);
+			  const gainCell = document.createElement('div');
+			  gainCell.className = 'item3';
+			  gainCell.textContent = FDYUDYG.piuweyfnqq;
+			  if (FDYUDYG.piuweyfnqq > 0) gainCell.classList.add('risePrice');
+			  else if (FDYUDYG.piuweyfnqq < 0) gainCell.classList.add('fellPrice');
+			  else gainCell.classList.add('flatPrice');
+			  row.appendChild(gainCell);
+			  [FDYUDYG.cuoiuwuqie, FDYUDYG.sidpsids].forEach(value => {
+				const cell = document.createElement('div');
+				cell.className = 'item3';
+				cell.textContent = value;
+				row.appendChild(cell);
+			  });
+			  const abacusCell = document.createElement('div');
+			  abacusCell.className = 'item-abacus';
+			  const abacusbtn = document.createElement('button');
+			  abacusbtn.className = 'btn-expand2'; 
+			  abacusbtn.textContent = "\u{1F9EE}" ;
+			  abacusbtn.onclick = () => piYudusUd(ouvimvkiffi,btoa(qwshjkkgu));  
+			  abacusCell.appendChild(abacusbtn);
+			  row.appendChild(abacusCell);
+			  const alarmCell = document.createElement('div');
+			  alarmCell.className = 'item-abacus';
+			  const alarmbtn = document.createElement('button');
+			  alarmbtn.className = 'btn-expand3'; 
+			  alarmbtn.textContent = "\u{1F514}" ;
+			  alarmbtn.onclick = () => uY3ocuc07(nxmcyeqrw,btoa(qwshjkkgu));  
+			  alarmCell.appendChild(alarmbtn);
+			  row.appendChild(alarmCell);			  
+			  mainList.appendChild(row);	
 	  }
   } 
 
-   async function displayPostYE1(stockId,firstVisit) {
-	  const post1 = await getPostYOY(stockId,firstVisit);
-	  const post2 = await getPostEPS(stockId,firstVisit);
-		if (post1) {
-			let postData1 = post1.data ;
-			let postDataMatrix1 = postData1[0] ;
-			itemYear_stockname = postDataMatrix1.name ;
-			itemYear_arry11 = postDataMatrix1.time ;
-			itemYear_arry12 = postDataMatrix1.revenue ;
-			itemYear_arry13 = postDataMatrix1.revenueYOY ;
-			tr_line ="",show_YearRpt="" ;
+   async function mhaBnhdfdoeyrr(qwshjkkgu,uywebdncnc) {
+	  const hjkshfkf3yu = await jWdsudjQue0es(qwshjkkgu,uywebdncnc);
+	  const qeu9uo1euee = await qruErejdjfjd(qwshjkkgu,uywebdncnc);
+		if (hjkshfkf3yu) {
+			let bxb5ciwe4hnvg1 = hjkshfkf3yu.data ;
+			let bxb5ciwe4hnvgMatrix1 = bxb5ciwe4hnvg1[0] ;
+			itemYear_stockname = bxb5ciwe4hnvgMatrix1.name ;
+			cvkljforuevr = bxb5ciwe4hnvgMatrix1.time ;
+			ncvjuojfmcervr = bxb5ciwe4hnvgMatrix1.revenue ;
+			oqcxbueyhfvr = bxb5ciwe4hnvgMatrix1.revenueYOY ;
+			jdjdjjsdjtrl ="",jhsdfkzxpr="" ;
        		let  item2currency=0 ;
-			for (let i = 0; i < itemYear_arry11.length; i++) {
-				item2currency = (itemYear_arry12[i]/1000) + "" ;
+			for (let i = 0; i < cvkljforuevr.length; i++) {
+				item2currency = (ncvjuojfmcervr[i]/1000) + "" ;
 				item2currency = item2currency.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
-				tr_line = tr_line + '<tr><td>' + timestampToTime(itemYear_arry11[i]) + '</td><td>' + item2currency + '</td><td>' +　itemYear_arry13[i]　+'</td></tr>' ;
+				jdjdjjsdjtrl = jdjdjjsdjtrl + '<tr><td>' + nYcuyQhhf(cvkljforuevr[i]) + '</td><td>' + item2currency + '</td><td>' +　oqcxbueyhfvr[i]　+'</td></tr>' ;
 			} ;						 
-		    show_YearRpt='<table width="33%" style="color: rgb(132, 141, 151); font-size: 14px; text-align: right;" border="1">' + '<thead><tr><td style="width:33%;color:#9c3579">[' + itemYear_stockname + ']月財報</td><td style="width:25%">營收(千元)</td><td style="width:33%">年增率</td></thead><tbody>' + tr_line  + '</tbody></table>'  ;				
+		    jhsdfkzxpr='<table width="33%" style="color: rgb(132, 141, 151); font-size: 14px; text-align: right;" border="1">' + '<thead><tr><td style="width:33%;color:#9c3579">[' + itemYear_stockname + ']月財報</td><td style="width:25%">營收(千元)</td><td style="width:33%">年增率</td></thead><tbody>' + jdjdjjsdjtrl  + '</tbody></table>'  ;				
 		}
 
-		if (post2) {
-			let postData2 = post2.data ;
-			let postDataMatrix2 = postData2[0] ;
-			itemYear_stockname = postDataMatrix2.name ;
-			itemYear_arry21 = postDataMatrix2.time ; ;
-			itemYear_arry22 = postDataMatrix2.epsYOY ;
-			itemYear_arry23 = postDataMatrix2.eps ;
-			tr_line =""
+		if (qeu9uo1euee) {
+			let bxb5ciwe4hnvg2 = qeu9uo1euee.data ;
+			let bxb5ciwe4hnvgMatrix2 = bxb5ciwe4hnvg2[0] ;
+			itemYear_stockname = bxb5ciwe4hnvgMatrix2.name ;
+			nchajfhweuyvr = bxb5ciwe4hnvgMatrix2.time ; ;
+			qwbphdueuvr = bxb5ciwe4hnvgMatrix2.epsYOY ;
+			zuincksjsdueyr = bxb5ciwe4hnvgMatrix2.eps ;
+			jdjdjjsdjtrl =""
 			var item2currency=0;
 			var espEarning_digit=0; 
-			var espDate_arry = [...itemYear_arry21].reverse();
-			var espEarning_arry = [...itemYear_arry23].reverse(); 
+			var espDate_arry = [...nchajfhweuyvr].reverse();
+			var espEarning_arry = [...zuincksjsdueyr].reverse(); 
 			var accuEarning_arry = espEarning_arry ;
 			var text,subStr,quarterDateStr,quarterDate_arry ;
 			for (var i = 0; i < espDate_arry.length; i++) {
-			espDate_arry[i]=timestampToTime(espDate_arry[i]) ;
+			espDate_arry[i]=nYcuyQhhf(espDate_arry[i]) ;
 			subStr =espDate_arry[i].substring(espDate_arry[i].indexOf("-")+1) ;
 			switch (subStr) {
 				case "01": 
@@ -317,9 +390,9 @@
 			}     
 			} ; 
 			accuEarning_arry.reverse() ;
-			for (var i = 0; i < itemYear_arry21.length; i++) {
-				item2currency = itemYear_arry22[i]  ;
-				quarterDateStr=timestampToTime(itemYear_arry21[i]) ;
+			for (var i = 0; i < nchajfhweuyvr.length; i++) {
+				item2currency = qwbphdueuvr[i]  ;
+				quarterDateStr=nYcuyQhhf(nchajfhweuyvr[i]) ;
 				quarterDate_arry= quarterDateStr.split("-") ;
 				switch (quarterDate_arry[1]) {
 					case "01": 
@@ -335,360 +408,67 @@
 						quarterDate_arry[1]="Q4"
 						break;
 				}
-				tr_line = tr_line + '<tr><td><b>' +  quarterDate_arry[0] + quarterDate_arry[1] + '</b></td><td>' + item2currency + '</td><td>' +　itemYear_arry23[i]　+'</td><td>' +　accuEarning_arry[i]　+'</td></tr>' ;
+				jdjdjjsdjtrl = jdjdjjsdjtrl + '<tr><td><b>' +  quarterDate_arry[0] + quarterDate_arry[1] + '</b></td><td>' + item2currency + '</td><td>' +　zuincksjsdueyr[i]　+'</td><td>' +　accuEarning_arry[i]　+'</td></tr>' ;
 			} ;
-			show_SeasonRpt='<table width="30%" style="color: rgb(132, 141, 151); font-size: 14px; text-align: right;" border="1">' + '<thead><tr><td style="width:40%;color:#9c3579">[' + itemYear_stockname + ']季財報</td><td style="width:40%">epsYOY(%)</td><td style="width:20%">EPS</td><td style="width:35%">累計EPS</td></thead><tbody>' + tr_line  + '</tbody></table>'  ;
+			cnmvweghfpr='<table width="30%" style="color: rgb(132, 141, 151); font-size: 14px; text-align: right;" border="1">' + '<thead><tr><td style="width:40%;color:#9c3579">[' + itemYear_stockname + ']季財報</td><td style="width:40%">epsYOY(%)</td><td style="width:20%">EPS</td><td style="width:35%">累計EPS</td></thead><tbody>' + jdjdjjsdjtrl  + '</tbody></table>'  ;
 		}	
-        if (firstVisit === undefined || firstVisit === null) {
+        if (uywebdncnc === undefined || uywebdncnc === null) {
 			document.getElementById("hiddenElement1").innerHTML="&nbsp;" ;
 			document.getElementById("hiddenElement2").innerHTML="&nbsp;" ;
 			document.getElementById("collapseBtn").innerHTML="&nbsp;" ;			
         }
         else {
-			document.getElementById("hiddenElement1").innerHTML=show_YearRpt ;
-			document.getElementById("hiddenElement2").innerHTML=show_SeasonRpt ;
+			document.getElementById("hiddenElement1").innerHTML=jhsdfkzxpr ;
+			document.getElementById("hiddenElement2").innerHTML=cnmvweghfpr ;
 			document.getElementById("collapseBtn").outerHTML="<div id='collapseBtn'><img src='collapse.png' style='cursor:pointer;' onclick='collapseElement()' /></div>" ;
         } 
   } 
 
-  async function displayPostYE2(stockId,firstVisit) {
+  async function iueuqWrpenho(qwshjkkgu,uywebdncnc) {
 		mask_item1.style.display = "block" ;
 		document.documentElement.scrollTop=0;
   }
-  // 初始數據
-  // let labels = [] , dataPoints1 = [] , dataPoints2 = [] ;
-  async function getData1(stockId) {
-	  	let fetchUrl_str="" ;
-		let fetchUrl_str1="https://ws.api.cnyes.com/ws/api/v1/charting/history?resolution=1&symbol=TWS:" , fetchUrl_str2=":STOCK&quote=1"   ;
-		if (stockId == 9999 ) 
-			fetchUrl_str="https://ws.api.cnyes.com/ws/api/v1/charting/history?symbol=TWS:TSE01:INDEX&resolution=D&quote=1&from=NaN&to=NaN"
-		else
-			fetchUrl_str=fetchUrl_str1 + stockId_list[stockId] + fetchUrl_str2 ;
-		const response = await fetch(fetchUrl_str); 
-	    if  (!response.ok) {
-		   throw new Error(`HTTP error!!!! status: ${response.status}`);
-		  }
-	    else {
-		  const result = await response.json();
-		  return result; // ← 正確把值傳出去 
-	    }
-	 }
-  async function getData2() {
-		  const response = await fetch("https://ws.api.cnyes.com/ws/api/v1/charting/history?symbol=TWS:TSE01:INDEX&resolution=D&quote=1&from=NaN&to=NaN"); 
-		  if  (!response.ok) {
-			  throw new Error(`HTTP error!!!! status: ${response.status}`);
-			}
-		  else {
-			  const result = await response.json();
-			  return result; // ← 正確把值傳出去 
-		  }
-	 }
 
-  async function displayPostChart() {	
-	    console.log('Top!!!') ;
+  async function xncvFfyreh() {
 		document.documentElement.scrollTop=0;
   } 
  
- async function realtimePrice(stockId,firstVisit) {	
- 		let mymatrix,wi_o,wi_h,wi_c,wi_cc,wi_gg,wi_t,wi_tt,midline_txt1,midline_txt2,title_txt,item_name1,item_name2,item_price1,item_price2,mid_price1=0,mid_price2=0,min_price=0,max_price=0,incdecPrice1,incdecPrice2,timeLabel,labels=[],dataPoints1=[],dataPoints2=[],title1="圖例1",title2="圖例2",point_no=0;
-		let rightVisible = true;
-		if (firstVisit) sw_no=2;
-		const oldChart=document.getElementById("realtimeChart");
-		const oldcollapseBtn2=document.getElementById("collapseBtn2");
-		const oldstopBtn=document.getElementById("stopBtn");
-		const oldcollapseBtns=document.getElementById("collapseBtns");
-		const oldhiddenMsg2=document.getElementById("hiddenMsg2");
-		console.log("firstVisit=" + firstVisit);	
-		if (oldhiddenMsg2 && firstVisit) oldhiddenMsg2.style.display = "block" ;		
-		if (oldChart && firstVisit) oldChart.outerHTML = "<canvas id='realtimeChart' width='320' height='200' style='display:block;'></canvas>" ;
-		if  (oldcollapseBtn2 && firstVisit) {
-			oldcollapseBtns.outerHTML = "<div id='collapseBtns' style='display:flex'><div id='collapseBtn2' style='justify-content:center;'><img src='collapse.png' style='cursor:pointer;' onclick='collapseElement2()' /></div>" +
-			"<div id='oneBtn' style='justify-content:center;'><img src='onebtn.png' style='cursor:pointer;' /></div>" +
-			"<div id='twinBtn' style='justify-content:center;'><img src='twinbtn.png' style='cursor:pointer;' /></div>" +
-			"<div id='stopBtn' style='justify-content:center;'><img src='stopbtn.png' style='cursor:pointer;' /></div>" +
-			"<div id='goBtn' style='justify-content:center;'><img src='gobtn.png' style='cursor:pointer;' /></div></div>"; 
-		}	
-		while(intervalIds.length){
-			  clearInterval(intervalIds.pop());
-		 }
-		 const post1 = await getData1(stockId);
-		 const post2 = await getData2();
-		 await displayPostChart();   		  
-		 if (post1) {
-				wi_o=post1.data.o;
-				wi_h=post1.data.h;
-				wi_c=post1.data.c;
-				wi_t=post1.data.t;
-				wi_cc=[...wi_c].reverse() ;
-				wi_tt=[...wi_t].reverse() ;				
-			    const now = new Date();
-			    timeLabel = now.toLocaleTimeString('zh-TW', { hour12: false, timeStyle: 'medium' });
-				const quote_obj = post1.data.quote ;
-				for ( var n in quote_obj) {
-				   if ( n == "200009" )  item_name1=quote_obj[n] ;
-				   if ( n == "11" ) incdecPrice1=quote_obj[n] ;
-				   if ( n == "6" ) item_price1=quote_obj[n] ;
-				}
-				mid_price1=item_price1-incdecPrice1;
-				mid_price1=mid_price1.toFixed(2);
-				max_price=mid_price1*1.15 ;
-				min_price=mid_price1*0.85 ;
-				if (item_price1>900 && incdecPrice1>50) {
-					max_price=mid_price1*1.18 ;
-					min_price=mid_price1*0.82 ;
-				}
-				if (item_price1<70 && incdecPrice1>2.5) {
-					max_price=mid_price1*1.12 ;
-					min_price=mid_price1*0.9 ;
-				}				
-			// midline_txt1= item_name1+'平盤：'+mid_price1.toString() ; 
-				midline_txt1 = item_price1.toString();
-			}
-		  if (sw_no==2 && post2) {
-				wi_o=post2.data.o;
-				wi_h=post2.data.h;
-				wi_c=post2.data.c;
-				item_price2=wi_c[0];
-				const quote_obj = post2.data.quote ;
-				for (var n in quote_obj) {
-				   if ( n == "200009" )  item_name2=quote_obj[n] ;
-				   if ( n == "11" ) incdecPrice2= quote_obj[n] ;
-				}
-				mid_price2=wi_c-incdecPrice2;
-				mid_price2=mid_price2.toFixed(2);
-				midline_txt2= mid_price2.toString() + '[' + incdecPrice2.toString() + ']'; 
-				wi_gg = Array(wi_tt.length).fill(item_price2);
-				dataPoints2=[...wi_gg] ;
-			}
-			for (let i=0;i<wi_tt.length ;i++) {
-				let date = new Date(wi_tt[i] * 1000);
-				let time = date.toLocaleTimeString('zh-CN', {hour12: false,});
-				wi_tt[i]=time;
-				const hour = parseInt(time.split(":")[0], 10);
-				const min = parseInt(time.split(":")[1], 10) ;
-				if (min % 10 === 0) 
-					wi_tt[i]=hour.toString() + min.toString(); 
-				else wi_tt[i]="" ; 
-			}
-			labels=[...wi_tt];
-			dataPoints1=[...wi_cc];
-	      const ctx = document.getElementById('realtimeChart').getContext('2d');
-		  config = {
-			  type: 'line',
-			  data: {
-				labels: labels,
-				datasets: [
-				  {
-					label:item_name1,	// Legend_y1 show
-					data: dataPoints1,
-					borderColor: 'red',   // 螢光綠線
-					yAxisID:'y1',
-					borderWidth: 2,
-					cubicInterpolationMode: 'monotone',
-					tension: 0.3,
-					fill: false,
-					pointRadius: 0,           // 隱藏點
-					pointHoverRadius: 0
-				  },
-				  {
-					label:item_name2,   // Legend_y2 show
-					data: dataPoints2,
-					borderColor: 'blue',   // 螢光綠線
-					yAxisID:'y2',
-					borderWidth: 2,
-					cubicInterpolationMode: 'monotone',
-					tension: 0.3,
-					fill: false,
-					pointRadius: 0,           // 隱藏點
-					pointHoverRadius: 0
-				  }
-				]
-			  },
-			  options: {
-				responsive: true,
-				maintainAspectRatio: false,
-				animation: {
-				onComplete() {
-					setTimeout(() => chart.update(), 0);
-				}},             // 關閉動畫，加速更新
-				scales: {
-				  y1: {
-						min:min_price,  
-						max:max_price,
-						grid: { color: '#333' },
-						ticks: { color: '#aaa' },
-						position: 'left'
-				  },
-				  y2: {
-					type:'linear',
-					position: 'right'
-				  }
-				},
-				plugins: {
-				  annotation: {
-					annotations: {
-					  leftMidline: {
-						type: 'line',
-						yScaleID: 'y1',
-						yMin:mid_price1,
-						yMax:mid_price1,
-						borderColor: '#ff4444',
-						borderWidth: 1.5,
-						borderDash: [6, 6],
-						label: {
-						  display: true,
-						  content: midline_txt1,				// '中線 y=38'
-						  fontWeight:200,
-						  color: '#c431a7',						// '#00ff88'
-						  backgroundColor: '#000' ,
-						  font: {
-							size: 8,
-							weight: 250,  // Set 'lighter'
-						  }
-						//  position: 'start'
-						}
-					  },
-					  rightMidline: {
-						type: 'line',
-						yScaleID: 'y2',
-						yMin:mid_price2,
-						yMax:mid_price2,
-						borderColor: '#00b3ff',
-						borderWidth: 1.5,
-						borderDash: [6, 6],
-						label: {
-						  display: true,
-						  content: midline_txt2 ,			// '中線 y=38'
-						  fontWeight:200,
-						  color: '#00b3ff',
-						  backgroundColor: '#000',
-						  position: 'end',
-						  font: {
-							size: 8,
-							weight: 250,  // Set 'lighter'
-						  }
-						}
-					  }
-					}
-				  }
-				}
-			  }
-			} ;
-			let chart= new Chart(ctx,config);
-			document.getElementById('oneBtn').addEventListener('click', async() => {
-				rightVisible=false;
-				chart.options.scales.y2.display=false;
-				chart.options.plugins.annotation.annotations.rightMidline.display=false;
-				for (let i=0;i<dataPoints2.length-1;i++) dataPoints2.pop() ;
-				if (sw_no==1) return  
-				else sw_no=1;
-			});
-			document.getElementById('twinBtn').addEventListener('click', async() => {
-					if (sw_no==2) {return} else sw_no=2 ;
-					if (dataPoints2.length != 0) {
-						for (let i=0;i<dataPoints2.length-1;i++) {
-							dataPoints2.pop()
-						}
-					}
-					rightVisible=true;
-					chart.options.scales.y2.display=true;
-					chart.options.plugins.annotation.annotations.rightMidline.display=true;
-			  });
-			document.getElementById('stopBtn').addEventListener('click',()=>(running=true));	  
-			document.getElementById('goBtn').addEventListener('click',()=>(running=false));
-			chart.update();	
-			console.log('chart=',chart);
-		  id=setInterval(async() => {
-				const marketClosetime = "13:30:00"; 
-				const [h, m, s] = marketClosetime.split(':').map(Number);
-				const timeToSeconds= h * 3600 + m * 60 + s ;
-				const now = new Date();
-				const nowSeconds = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();	
-				if (nowSeconds > timeToSeconds || running) 
-					return
-				 else 	
-				  running=true;
-				  const post1 = await getData1(stockId);
-				  if (rightVisible==true) {
-					  const post2 = await getData2();
-				  }
-				  if (post1) {
-						wi_o=post1.data.o;
-						wi_h=post1.data.h;
-						wi_c=post1.data.c;
-						const now = new Date();
-						let time = now.toLocaleTimeString('zh-TW', { hour12: false, timeStyle: 'medium' });
-						const hour = parseInt(time.split(":")[0], 10);
-						const min = parseInt(time.split(":")[1], 10) ;
-						if ( min % 10===0) 
-							timeLabel=hour.toString() + min.toString() 
-						else timeLabel=""; 
-						const quote_obj = post1.data.quote ;
-						for ( var n in quote_obj) {
-						   if ( n == "200009" )  item_name1=quote_obj[n] ;
-						   if ( n == "11" ) incdecPrice1=quote_obj[n] ;
-						   if ( n == "6" ) item_price1=quote_obj[n] ;
-						}
-						mid_price1=item_price1-incdecPrice1;
-						mid_price1=mid_price1.toFixed(2) ;
-					//	midline_txt1= item_name1+'平盤：'+mid_price1.toString() ; 
-						midline_txt1 = item_price1.toString();						
-					}
-				  if (rightVisible==true && post2)  {
-						wi_o=post2.data.o;
-						wi_h=post2.data.h;
-						wi_c=post2.data.c;
-						item_price2=wi_c[0];
-						const quote_obj = post2.data.quote ;
-						for ( var n in quote_obj) {
-						   if ( n == "200009" )  item_name2=quote_obj[n] ;
-						   if ( n == "11" ) incdecPrice2= quote_obj[n] ;
-						}
-						mid_price2=item_price2-incdecPrice2;
-					//	midline_txt2= item_name2+'平盤：'+mid_price2.toString() ; 
-						midline_txt2 = item_price2.toString() ;				
-					}
-				 labels.push(timeLabel);
-				 dataPoints1.push(item_price1);
-				 if (rightVisible==true) 
-					 dataPoints2.push(item_price2) 						
-				 else {
-					 for (let i=0;i<dataPoints2.length;i++) {
-						dataPoints2.pop()
-					 }	 
-				 } ;		
-				 chart.update;
-				 count++ ;
-				 running=false ;
-			},3000);
-		 intervalIds.push(id); 
-   }   
-
-   function timestampToTime(timestamp) {
+   function nYcuyQhhf(timestamp) {
         var date = new Date(timestamp * 1000);
         var Y = date.getFullYear() + '-';
         var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) ;
 	    return Y+M ;
     }
 
-	async function showElement(stockNo,firstVisit) {
-		await displayPostYE1(stockNo,firstVisit);
-		await displayPostYE2(stockNo,firstVisit);  
+	async function oxcQewncvcnv(xckcnuyrei,uywebdncnc) {
+		await mhaBnhdfdoeyrr(xckcnuyrei,uywebdncnc);
+		await iueuqWrpenho(xckcnuyrei,uywebdncnc);  
     }
 
+	async function ipsifaifiaYojjfx(jhdfwhe,xckcnuyrei) {
+		window.location.href = CODEX(jhdfwhe) + xckcnuyrei ;
+    }
+	
+	async function uY3ocuc07(nxmcyeqrw,xckcnuyrei) {
+		window.location.href = CODEX(nxmcyeqrw) + xckcnuyrei ;
+    }	
+	
+	async function piYudusUd(ouvimvkiffi,xckcnuyrei) {
+		window.location.href = CODEX(ouvimvkiffi) + xckcnuyrei ;
+    }
 
 	function collapseElement() {
       mask_item1.style.display="none" ;
       }	  
 	  
 	function collapseElement2() {
-		while(intervalIds.length){
-		  clearInterval(intervalIds.pop());
+		while(ncvnhWqeu.length){
+		  clearInterval(ncvnhWqeu.pop());
 		}
-		firstVisit = false;
+		uywebdncnc = false;
 	    let mask_item2 = document.getElementById("hiddenMsg2");
 	    if (mask_item2) {
-	      mask_item2.outerHTML = "<div id='hiddenMsg2' style='display:flex;'><div><canvas id='realtimeChart' width='320' height='200' style='display:none;'></canvas></div>" + 
+	      mask_item2.outerHTML = "<div id='hiddenMsg2' style='display:block;'><div><canvas id='realtimeChart' width='320' height='200' style='display:none;'></canvas></div>" + 
 			"<div id='collapseBtns' style='display:flex'><div id='collapseBtn2' style='display:none;justify-content:center;'><img src='collapse.png' style='cursor:pointer;' onclick='collapseElement2()' /></div>" + 
 			"<div id='oneBtn' style='display:none;justify-content:center;'><img src='onebtn.png' style='cursor:pointer;' /></div>" +
 			"<div id='twinBtn' style='display:none;justify-content:center;'><img src='twinbtn.png' style='cursor:pointer;' /></div>" +			
@@ -699,36 +479,15 @@
 	
 	function collapseElement3() {
 	    const mask_item2 = document.getElementById("hiddenMsg2");
-		while(intervalIds.length){
-		  clearInterval(intervalIds.pop());
+		while(ncvnhWqeu.length){
+		  clearInterval(ncvnhWqeu.pop());
 		}
-		firstVisit = false;
+		uywebdncnc = false;
     }
 	  
-  async function startShow() {
-		await displayPost(9999);
-		await displayPost(0);
-		await displayPost(1);
-		await displayPost(2);
-		await displayPost(3);
-		await displayPost(4);
-		await displayPost(5);
-		await displayPost(6);
-		await displayPost(7);
-		await displayPost(8);
-		await displayPost(9);
-		await displayPost(10);
-		await displayPost(11);
-		await displayPost(12);
-		await displayPost(13);
-		await displayPost(14);
-		await displayPost(15);
-		await displayPost(16);
-		await displayPost(17);
-		await displayPost(18);
-		await displayPost(19);
-		await displayPost(20);
-		await displayPost(21);
-		await displayPost(22);
-		await displayPost(23);
-	}  
+  async function uqzjdqhfncc(sel_No) {
+		mainList.textContent = "";
+		qwshjkkgu_pjwqvxzn = CODEX(hc01uqujdcxnn[sel_No]).split(',').map(x => x.slice(1, -1));
+		await wnv3n7urrhh(9527614803);
+		for (let i=0;i<qwshjkkgu_pjwqvxzn.length;i++) await wnv3n7urrhh(qwshjkkgu_pjwqvxzn[i],i);
+	}   
