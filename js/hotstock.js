@@ -219,7 +219,7 @@
 	nxmcyeqrw="aHR0cHM6Ly9wZXJyeWpvaG5zb25sZW9uLmdpdGh1Yi5pby90dXRvci9wcmljZWFsYXJtLmh0bT9qZnZkbzdkZnVvdGR2PQ==",
 	ouvimvkiffi="aHR0cHM6Ly9wZXJyeWpvaG5zb25sZW9uLmdpdGh1Yi5pby90dXRvci9jYWwuaHRtP3dzamtoenUwMWo5dmpxdWpweWQ9";
 	let qwshjkkgu_pjwqvxzn=[],nxbciyrpsg=false,sw_no=1,uywebdncnc = true ;
-	let $uydyhsjde=decode("5a2j6LKh5aCxLGVwc1lPWSglKSxFUFMs57Sv6KiIRVBT"),$jcvuzxnqwpjd="5pyI6LKh5aCxLOeHn+aUtijljYPlhYMpLOW5tOWinueOhw==";
+	let $uydyhsjde=CODEX("5a2j6LKh5aCxLGVwc1lPWSglKSxFUFMs57Sv6KiIRVBT"),$jcvuzxnqwpjd="5pyI6LKh5aCxLOeHn+aUtijljYPlhYMpLOW5tOWinueOhw==";
     let refSec = 3000 ; 
 	let count=0 ,qwshjkkgu=0 , btn2_expandId= ""  ;
 	let width = 0 , ncvnhWqeu = [] , ckviieijndMX=[] , jckljxcoveuvr = [] , cvkljforuevr = [] , ncvjuojfmcervr = [] , oqcxbueyhfvr = [] , nchajfhweuyvr = [] , qwbphdueuvr = [] , zuincksjsdueyr = [] ;
